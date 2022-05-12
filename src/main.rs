@@ -1,7 +1,7 @@
 use std::env;
 use std::process;
 
-use hello_rust::Config;
+use minigrep::Config;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -10,7 +10,7 @@ fn main() {
         process::exit(1);
     });
 
-    if let Err(e) = hello_rust::run(config) {
+    if let Err(e) = minigrep::run(config) {
         eprintln!("Application error: {}", e);
         process::exit(1);
     }
